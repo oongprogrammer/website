@@ -9,7 +9,7 @@ document.querySelectorAll('.slot').forEach(function(slot){
 });
 
 // 2. Typing effect for your talent. Edit this list.
-var talents = ['Beginner programmer', 'Cook', 'Musician','Artist'];
+var talents = ['programmer', 'music lover', 'artist', 'cook'];
 var el = document.getElementById('typed'), t = 0, c = 0, del = false;
 (function type(){
   var word = talents[t];
