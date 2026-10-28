@@ -1,11 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>rasha aong</h1>
+<div class="sea" aria-hidden="true">
+  <svg width="0" height="0" style="position:absolute"><defs>
+    <symbol id="fish" viewBox="0 0 60 30"><path d="M24 15Q42 0 58 15Q42 30 24 15Z"/><path d="M26 15L4 3V27Z"/><circle cx="50" cy="13" r="1.8" fill="var(--g4)"/></symbol>
+    <symbol id="weed" viewBox="0 0 30 100"><path d="M15 100C5 75 25 55 15 30C10 15 18 8 15 0L21 0C24 10 18 18 22 32C32 56 12 76 24 100Z"/></symbol>
+  </defs></svg>
+  <div class="rays" id="rays"></div>
+  <canvas id="snow"></canvas>
+  <svg class="fish" viewBox="0 0 60 30" style="top:14%;width:46px;animation-duration:46s;animation-delay:-8s"><use href="#fish"/></svg>
+  <svg class="fish rev" viewBox="0 0 60 30" style="top:27%;width:64px;animation-duration:58s;animation-delay:-30s"><use href="#fish" transform="translate(60 0) scale(-1 1)"/></svg>
+  <svg class="fish" viewBox="0 0 60 30" style="top:44%;width:38px;animation-duration:40s;animation-delay:-22s"><use href="#fish"/></svg>
+  <svg class="fish rev" viewBox="0 0 60 30" style="top:61%;width:72px;animation-duration:64s;animation-delay:-12s"><use href="#fish" transform="translate(60 0) scale(-1 1)"/></svg>
+  <svg class="fish" viewBox="0 0 60 30" style="top:78%;width:52px;animation-duration:52s;animation-delay:-40s"><use href="#fish"/></svg>
+  <svg class="jelly" id="jelly" viewBox="0 0 60 100"><path d="M5 40Q5 5 30 5Q55 5 55 40Q30 32 5 40Z"/><path class="t" d="M15 40Q10 60 16 80"/><path class="t" d="M25 38Q20 65 26 92"/><path class="t" d="M35 38Q40 65 34 90"/><path class="t" d="M45 40Q50 60 44 78"/></svg>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top">Home</a><a href="#about">About</a><a href="#talent">Talent</a><a href="#recent">Recent work</a>
+    <a href="#past">Past work</a><a href="#history">History</a><a href="#certs">Certificates</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HOW TO USE PICTURES:
+     1) Click any dashed box in the browser to preview a picture, or
+     2) Put your image in an "images" folder and add data-src="images/me.jpg" to the box so it loads permanently. -->
+
+<header class="hero" id="top">
+  <div class="surface" aria-hidden="true">
+    <div class="sky"></div>
+    <div class="sun"></div>
+    <svg class="wv w0" viewBox="0 0 1440 130" preserveAspectRatio="none" style="top:66px;--t:11s"><path d="M0 44 Q 130 30 260 44 T 520 44 T 780 44 T 1040 44 T 1300 44 T 1560 44 V130 H0Z"/></svg>
+    <svg class="wv w1 r" viewBox="0 0 1440 130" preserveAspectRatio="none" style="top:84px;--t:8s"><path d="M0 44 Q 100 26 200 44 T 400 44 T 600 44 T 800 44 T 1000 44 T 1200 44 T 1400 44 T 1600 44 V130 H0Z"/></svg>
+    <svg class="wv w2" viewBox="0 0 1440 130" preserveAspectRatio="none" style="top:102px;--t:13s"><path d="M0 44 Q 115 32 230 44 T 460 44 T 690 44 T 920 44 T 1150 44 T 1380 44 T 1610 44 V130 H0Z"/></svg>
+    <svg class="wv w3 r" viewBox="0 0 1440 130" preserveAspectRatio="none" style="top:120px;--t:7s"><path d="M0 44 Q 85 24 170 44 T 340 44 T 510 44 T 680 44 T 850 44 T 1020 44 T 1190 44 T 1360 44 T 1530 44 V130 H0Z"/></svg>
+    <svg class="wv w4" viewBox="0 0 1440 130" preserveAspectRatio="none" style="top:138px;--t:12s"><path d="M0 44 Q 105 30 210 44 T 420 44 T 630 44 T 840 44 T 1050 44 T 1260 44 T 1470 44 V130 H0Z"/></svg>
+    <svg class="wv w5 r" viewBox="0 0 1440 130" preserveAspectRatio="none" style="top:156px;--t:9s"><path d="M0 44 Q 75 26 150 44 T 300 44 T 450 44 T 600 44 T 750 44 T 900 44 T 1050 44 T 1200 44 T 1350 44 T 1500 44 V130 H0Z"/></svg>
+    <svg class="wv w6" viewBox="0 0 1440 130" preserveAspectRatio="none" style="top:174px;--t:14s"><path d="M0 44 Q 95 32 190 44 T 380 44 T 570 44 T 760 44 T 950 44 T 1140 44 T 1330 44 T 1520 44 V130 H0Z"/></svg>
+    <svg class="wv w7 r" viewBox="0 0 1440 130" preserveAspectRatio="none" style="top:192px;--t:6s"><path d="M0 44 Q 65 28 130 44 T 260 44 T 390 44 T 520 44 T 650 44 T 780 44 T 910 44 T 1040 44 T 1170 44 T 1300 44 T 1430 44 T 1560 44 V130 H0Z"/></svg>
+  </div>
+  <div class="wrap">
+    <label class="slot avatar" data-src="">
+      <input type="file" accept="image/*">Click to add<br>profile picture
+    </label>
+    <div>
+      <h1>ศุภกร สุทธิเกิด</h1>
+      <p class="talent">I am a <b id="typed">Beginner programmer</b></p>
+      <p class="loc">📍 Krabi</p>
+      <div class="btns">
+        <a class="btn p" href="#recent">See my work</a>
+        <a class="btn s" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="about"><div class="wrap">
+    <h2>About me</h2>
+    <p>[Write your bio here. Tell people who you are, what you enjoy, and what you want to do next.]</p>
+  </div></section>
+
+  <section id="talent"><div class="wrap">
+    <h2>Talent</h2>
+    <div class="chips">
+      <span class="chip">[Talent 1]</span><span class="chip">[Talent 2]</span><span class="chip">[Talent 3]</span>
+      <span class="chip">[Talent 4]</span><span class="chip">[Talent 5]</span><span class="chip">[Talent 6]</span>
+    </div>
+  </div></section>
+
+  <section id="recent"><div class="wrap">
+    <h2>Recent work</h2>
+    <div class="grid">
+      <article class="card">
+        <label class="slot" data-src=""><input type="file" accept="image/*">Click to add picture</label>
+        <div class="body"><h3>[Project title]</h3><div class="meta">[Month Year]</div>
+          <p>[Short description of this project.]</p>
+          <div class="more"><p>[More details: tools used, your role, the result.]</p></div>
+          <button type="button">Show details</button></div>
+      </article>
+      <article class="card">
+        <label class="slot" data-src=""><input type="file" accept="image/*">Click to add picture</label>
+        <div class="body"><h3>[Project title]</h3><div class="meta">[Month Year]</div>
+          <p>[Short description of this project.]</p>
+          <div class="more"><p>[More details: tools used, your role, the result.]</p></div>
+          <button type="button">Show details</button></div>
+      </article>
+    </div>
+  </div></section>
+
+  <section id="past"><div class="wrap">
+    <h2>Past work</h2>
+    <div class="grid">
+      <article class="card">
+        <label class="slot" data-src=""><input type="file" accept="image/*">Click to add picture</label>
+        <div class="body"><h3>[Project title]</h3><div class="meta">[Year]</div>
+          <p>[Short description.]</p>
+          <div class="more"><p>[More details.]</p></div>
+          <button type="button">Show details</button></div>
+      </article>
+      <article class="card">
+        <label class="slot" data-src=""><input type="file" accept="image/*">Click to add picture</label>
+        <div class="body"><h3>[Project title]</h3><div class="meta">[Year]</div>
+          <p>[Short description.]</p>
+          <div class="more"><p>[More details.]</p></div>
+          <button type="button">Show details</button></div>
+      </article>
+      <article class="card">
+        <label class="slot" data-src=""><input type="file" accept="image/*">Click to add picture</label>
+        <div class="body"><h3>[Project title]</h3><div class="meta">[Year]</div>
+          <p>[Short description.]</p>
+          <div class="more"><p>[More details.]</p></div>
+          <button type="button">Show details</button></div>
+      </article>
+    </div>
+  </div></section>
+
+  <section id="history"><div class="wrap">
+    <h2>History</h2>
+    <div class="tl">
+      <div class="ev"><div class="yr">[Year – Year]</div><h3>[School, job, or milestone]</h3><p>[What you did there.]</p></div>
+      <div class="ev"><div class="yr">[Year – Year]</div><h3>[School, job, or milestone]</h3><p>[What you did there.]</p></div>
+      <div class="ev"><div class="yr">[Year – Year]</div><h3>[School, job, or milestone]</h3><p>[What you did there.]</p></div>
+    </div>
+  </div></section>
+
+  <section id="certs" class="certs"><div class="wrap">
+    <h2>Certificates</h2>
+    <div class="grid">
+      <label class="slot" data-src=""><input type="file" accept="image/*">Click to add<br>certificate picture</label>
+      <label class="slot" data-src=""><input type="file" accept="image/*">Click to add<br>certificate picture</label>
+      <label class="slot" data-src=""><input type="file" accept="image/*">Click to add<br>certificate picture</label>
+    </div>
+  </div></section>
+
+  <section id="contact" class="contact"><div class="wrap">
+    <h2>Contact</h2>
+    <p>[Your email] &nbsp;|&nbsp; [Your phone] &nbsp;|&nbsp; [Your GitHub link]</p>
+    <a class="btn p" href="mailto:your@email.com">Send me an email</a>
+  </div>
+  <div class="seabed" aria-hidden="true">
+    <svg class="weed" viewBox="0 0 30 100" style="left:3%;height:80px;animation-delay:-0.0s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:9%;height:105px;animation-delay:-0.7s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:16%;height:70px;animation-delay:-1.4s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:24%;height:95px;animation-delay:-2.1s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:33%;height:60px;animation-delay:-2.8s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:42%;height:110px;animation-delay:-3.5s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:50%;height:75px;animation-delay:-4.2s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:59%;height:100px;animation-delay:-0.4s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:68%;height:65px;animation-delay:-1.1s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:77%;height:108px;animation-delay:-1.8s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:86%;height:85px;animation-delay:-2.5s"><use href="#weed"/></svg>
+    <svg class="weed" viewBox="0 0 30 100" style="left:93%;height:72px;animation-delay:-3.2s"><use href="#weed"/></svg>
+  </div></section>
+</main>
+
+<footer>© <span id="yr"></span> [Your Name]. Click anywhere to make bubbles.</footer>
+
+<div class="themes" role="group" aria-label="Color theme">
+  <button type="button" data-t="ocean" title="Ocean" style="background:linear-gradient(135deg,#1a9bc0,#ff8f70)"></button>
+  <button type="button" data-t="sunset" title="Sunset reef" style="background:linear-gradient(135deg,#c2456b,#ffd166)"></button>
+  <button type="button" data-t="lagoon" title="Lagoon" style="background:linear-gradient(135deg,#12a38a,#ff6f91)"></button>
+  <button type="button" data-t="neon" title="Neon deep sea" style="background:linear-gradient(135deg,#1a0f58,#ff2bd6)"></button>
+  <button type="button" data-t="arctic" title="Arctic" style="background:linear-gradient(135deg,#34607f,#f4b942)"></button>
+</div>
+
+<div class="gauge" aria-hidden="true"><i id="dot"></i><span id="depth">0 m</span></div>
+
+<script src="script.js"></script>
 </body>
 </html>
